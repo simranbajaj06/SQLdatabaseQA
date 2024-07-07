@@ -33,10 +33,10 @@ class CustomHuggingFaceEmbeddings(HuggingFaceEmbeddings):
         return self.model.get_sentence_embedding_dimension()
 
 def get_few_shot_db_chain():
-    db_user = "root"
-    db_password = "sambaserver"
+    db_user = "your username here"
+    db_password = "your password"
     db_host = "localhost"
-    db_name = "org"
+    db_name = "your database name here"
 
     db = SQLDatabase.from_uri(f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}",
                               sample_rows_in_table_info=3)
